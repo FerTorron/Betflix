@@ -5,18 +5,19 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,css}",
   ],
   theme: {
-    colors: {
-      'bgColor': '#1f1f1f',
-      'titleColor': '#E50914',
-      'whiteColor': '#FFF',
+    extend: {
+      colors: {
+        'bgColor': '#1f1f1f',
+        'titleColor': '#E50914',
+      },
+      fontFamily: {
+        'Bebas': ['"Bebas Neue"', 'sans-serif'],
+      },
+      fontSize: {
+        'titleSize': '2rem',
+        'notFound': '1.6rem',
+      },
     },
-    fontFamily: {
-      'Bebas': ['"Bebas Neue"', 'sans-serif'],
-    },
-    fontSize: {
-      'titleSize': '2rem',
-    },
-    extend: {},
   },
   plugins: [],
 }

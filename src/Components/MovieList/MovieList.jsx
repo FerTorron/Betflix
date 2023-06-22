@@ -25,17 +25,17 @@ const MovieList = () => {
         <div className='w-4/5 m-auto p-6 flex justify-between items-center flex-col gap-9'>
             <form className='flex items-center justify-between gap-8
             ' onSubmit={manejadorSubmit}>
-                <input className='rounded-lg py-2.5 px-5 focus:border-titleColor' name='busqueda' type="text" />
-                <button className='py-2.5 px-5 text-whiteColor font-semibold bg-titleColor rounded-lg' type='submit'>Buscar</button>
+                <input className='rounded-lg py-2.5 px-5 focus:border-titleColor border-2 border-white' name='busqueda' type="text" />
+                <button className='py-2.5 px-5 text-white font-semibold bg-titleColor hover:bg-zinc-900 transition-all border-titleColor border-2 rounded-lg' type='submit'>Buscar</button>
             </form>
 
             <ul className='w-full flex items-center justify-center flex-wrap gap-7'>
                 {
-                    peliculas === undefined ? <h2 className='text-whiteColor font-Bebas'>Película no encontrada</h2> : peliculas.map(peli => {
+                    peliculas === undefined ? <h2 className='text-white text-notFound font-Bebas'>Película no encontrada</h2> : peliculas.map(peli => {
                         return (
                             <li className='w-56 h-auto flex items-center justify-center flex-col gap-2 hover:scale-105 transition-all' key={peli.imdbID}>
                                 <img className='w-full h-80 object-cover' src={peli.Poster} alt={peli.Title} />
-                                <span className='text-center text-whiteColor font-semibold font-Bebas text-3xl'> {peli.Title} </span>
+                                <span className='text-center text-white font-semibold font-Bebas text-lg'> {peli.Title} </span>
                             </li>
                         )
                     })
